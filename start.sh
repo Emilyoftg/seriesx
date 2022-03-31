@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/Emilyoftg/newdq.git /newdq
+  git clone https://github.com/Emilyoftg/seriesx.git /seriesx
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /newdq
+  git clone $UPSTREAM_REPO /seriesx
 fi
-cd /newdq
+cd /seriesx
 pip3 install -U -r requirements.txt
-echo "Starting DQ...."
+echo "Starting seriesx...."
 python3 bot.py
